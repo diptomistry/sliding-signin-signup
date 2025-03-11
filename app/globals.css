@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Define theme variables using the @theme directive */
+@theme {
+  /* Animation durations */
+  --animation-duration: 40s;
+  --animation-direction: forwards;
+
+  /* Colors */
+  --color-hoverColor: #FF9F1C;
+  --color-brightColor: #039BAB;
+  --color-backgroundColor: #03C9D7;
+  --color-textColor: #333333;
+  --color-primaryColor: #6C63FF;
+  --color-secondaryColor: #FF6584;
+
+  /* Background colors */
+  --bg-main: #F8F9FA;
+  --bg-main-dark: #20232A;
+  --bg-secondary-dark: #33373E;
+  --bg-light-gray: #F7F7F7;
+  --bg-half-transparent: rgba(0, 0, 0, 0.5);
+
+  /* Fonts */
+  --font-sans: Poppins, sans-serif;
+  --font-hind-siliguri: 'Hind Siliguri', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Define custom animations */
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
   }
 }
 
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply custom animations */
+.animation-scroll {
+  animation: scroll var(--animation-duration) linear infinite;
+}
+
+.animation-slidein {
+  animation: slidein 1s ease 300ms;
+}
+
+/* Base styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Example of using custom colors */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
 }
