@@ -21,7 +21,7 @@ const SlidingLoginSignup = () => {
   return (
     <div>
       <div
-        className={`relative w-full bg-white min-h-[100vh] lg:min-h-screen overflow-hidden   before:content-[''] before:absolute before:w-[1500px] before:h-[1500px] lg:before:h-[2000px] lg:before:w-[2000px] lg:before:top-[-10%]  before:top-[initial] lg:before:right-[48%] before:right-[initial]  max-lg:before:left-[30%] max-sm:bottom-[72%]   max-md:before:left-1/2  max-lg:before:bottom-[68%]  before:z-[6] before:rounded-[50%]    max-md:p-6     lg:before:-translate-y-1/2  max-lg:before:-translate-x-1/2  before:bg-backgroundColor before:transition-all before:duration-[2s] lg:before:duration-[1.8s]  ${
+        className={`relative w-full bg-white min-h-[100vh] lg:min-h-screen overflow-hidden   before:content-[''] before:absolute before:w-[1500px] before:h-[1500px] lg:before:h-[2000px] lg:before:w-[2000px] lg:before:top-[-10%]  before:top-[initial] lg:before:right-[48%] before:right-[initial]  max-lg:before:left-[30%] max-sm:bottom-[72%]   max-md:before:left-1/2  max-lg:before:bottom-[75%]  before:z-[6] before:rounded-[50%]    max-md:p-6     lg:before:-translate-y-1/2  max-lg:before:-translate-x-1/2  before:bg-backgroundColor before:transition-all before:duration-[2s] lg:before:duration-[1.8s]  ${
           isSignUpMode
             ? "lg:before:translate-x-full lg:before:-translate-y-1/2 before:-translate-x-1/2 before:translate-y-full lg:before:right-[52%] before:right-[initial]  sm:max-lg:before:bottom-[22%] max-sm:before:bottom-[20%]  max-md:before:left-1/2"
             : ""
@@ -31,12 +31,12 @@ const SlidingLoginSignup = () => {
           <div
             className={` absolute top-[95%] lg:top-1/2 left-1/2 grid grid-cols-[1fr] z-[5] -translate-x-1/2  -translate-y-full lg:-translate-y-1/2 lg:w-1/2 w-full  transition-[1s]  duration-[0.8s] lg:duration-[0.7s] ease-[ease-in-out] "  ${
               isSignUpMode
-                ? "lg:left-1/4   max-lg:top-[5%]   max-lg:-translate-x-2/4   max-lg:translate-y-0"
+                ? "lg:left-1/4   max-lg:top-[-10%]   max-lg:-translate-x-2/4   max-lg:translate-y-0"
                 : "lg:left-3/4 "
             } `}
           >
             <div
-              className={` flex items-center justify-center flex-col   transition-all duration-[0.2s] delay-[0.7s] overflow-hidden col-[1_/_2] row-[1_/_2] px-20 py-0  z-20 max-md:px-6 max-md:py-0 ${
+              className={` flex items-center justify-center flex-col   transition-all duration-[0.2s] delay-[0.7s] overflow-hidden col-[1_/_2] row-[1_/_2] px-20 max-lg:mt-60  z-20 max-md:px-6 max-md:py-0 ${
                 isSignUpMode ? " opacity-0 z-10 " : " "
               }`}
             >
@@ -167,7 +167,7 @@ const SlidingLoginSignup = () => {
           </h1>
           
           <form className="space-y-5 md:space-y-6" action="#">
-       <div className="grid grid-cols-2 md:grid-cols-1 gap-5 md:gap-6">
+       <div className="grid grid-cols-2 lg:grid-cols-1 gap-5 md:gap-6">
        <div className="relative">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg className="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -332,7 +332,7 @@ const SlidingLoginSignup = () => {
            
             <Image
               src={log}
-              className={`  max-md:hidden w-[200px] lg:w-full transition-transform duration-[0.9s] lg:duration-[1.1s] ease-[ease-in-out] delay-[0.6s] lg:delay-[0.4s] ${
+              className={`  max-md:hidden max-lg:translate-y-[-40px] w-[200px] lg:w-full transition-transform duration-[0.9s] lg:duration-[1.1s] ease-[ease-in-out] delay-[0.6s] lg:delay-[0.4s] ${
                 isSignUpMode
                   ? "lg:translate-x-[-800px]   max-lg:translate-y-[-300px]"
                   : ""
