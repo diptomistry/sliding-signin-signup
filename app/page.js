@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+import React,{useState} from "react";
 import Image from "next/image";
 import log from "@/public/signin.svg";
 import register from "@/public/signup.svg";
@@ -82,18 +83,18 @@ const SlidingLoginSignup = () => {
                     id="remember"
                     aria-describedby="remember"
                     type="checkbox"
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-2 focus:ring-brightColor text-brightColor"
+                    className="w-4 h-4 rounded bg-gray-50 "
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label htmlFor="remember" className="text-gray-500 hover:text-gray-700 cursor-pointer">
+                  <label htmlFor="remember" className="text-gray-500  cursor-pointer">
                     Remember me
                   </label>
                 </div>
               </div>
               <a
                 href="#"
-                className="text-sm font-medium text-brightColor hover:text-hoverColor transition-colors"
+                className="text-sm font-medium text-brightColor hover:underline transition-colors"
               >
                 Forgot password?
               </a>
@@ -101,7 +102,7 @@ const SlidingLoginSignup = () => {
             
             <button
               type="submit"
-              className="w-full text-white bg-brightColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-[1.02] hover:shadow-md"
+              className="w-full text-white bg-backgroundColor hover:bg-brightColor focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-[1.02] hover:shadow-md"
             >
               Sign in
             </button>
@@ -234,20 +235,20 @@ const SlidingLoginSignup = () => {
                   id="terms"
                   aria-describedby="terms"
                   type="checkbox"
-                  className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-2 focus:ring-brightColor text-brightColor"
+                  className="w-4 h-4  rounded bg-gray-50 "
                   required
                 />
               </div>
               <div className="ml-3 text-sm">
                 <label htmlFor="terms" className="text-gray-500 hover:text-gray-700 cursor-pointer">
-                  I agree to the <a href="#" className="text-brightColor hover:text-hoverColor font-medium">Terms of Service</a> and <a href="#" className="text-brightColor hover:text-hoverColor font-medium">Privacy Policy</a>
+                  I agree to the <a href="#" className="text-brightColor hover:text-brightColor font-medium">Terms of Service</a> and <a href="#" className="text-brightColor hover:text-brightColor font-medium">Privacy Policy</a>
                 </label>
               </div>
             </div>
             
             <button
               type="submit"
-              className="w-full text-white bg-brightColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-[1.02] hover:shadow-md"
+              className="w-full text-white bg-backgroundColor hover:bg-brightColor focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-[1.02] hover:shadow-md"
             >
               Create Account
             </button>
