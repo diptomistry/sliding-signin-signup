@@ -1,21 +1,14 @@
-'use client';
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import log from "@/public/signin.svg";
 import register from "@/public/signup.svg";
 
 const SlidingLoginSignup = () => {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
-  const [userType, setUserType] = useState("");
+
 
   const toggleSignUpMode = () => {
     setIsSignUpMode(!isSignUpMode);
-  };
-  const handleUserTypeChange = (e) => {
-    setUserType(e.target.value);
-    if (e.target.value !== "doctor") {
-      setDepartment("");
-    }
   };
 
   return (
