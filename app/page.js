@@ -76,8 +76,7 @@ const SlidingLoginSignup = () => {
               New here ?
             </h3>
             <p className="text-[0.7rem] lg:text-[0.95rem] px-0 py-2 lg:py-[0.7rem]">
-              Sign up and discover the digital platform of Dhaka University
-              Medical Center
+            Sign up and discover our platform
             </p>
             <button
               className="bg-transparent w-[110px] h-[35px] text-gray-700 text-[0.7rem] lg:w-[130px] lg:h-[41px] lg:text-[0.8rem]  font-semibold   border-2 border-white rounded-full transition-colors duration-300 hover:bg-white hover:text-gray-700"
