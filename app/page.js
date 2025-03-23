@@ -11,9 +11,12 @@ const SlidingLoginSignup = () => {
   const toggleSignUpMode = () => {
     setIsSignUpMode(!isSignUpMode);
   };
+  // Common button styles
+  const buttonClasses = "w-full text-white bg-backgroundColor hover:bg-brightColor focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-[1.02] hover:shadow-md";
+  const buttonForGFT ="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white py-2.5 px-4 text-sm font-medium text-gray-500 hover:bg-gray-50 shadow-sm transition-all duration-200 hover:shadow hover:border-gray-400"
 
   return (
-    <div>
+
       <div
         className={`relative w-full bg-white min-h-[100vh] lg:min-h-screen overflow-hidden   before:content-[''] before:absolute before:w-[1500px] before:h-[1500px] lg:before:h-[2000px] lg:before:w-[2000px] lg:before:top-[-10%]  before:top-[initial] lg:before:right-[48%] before:right-[initial]  max-lg:before:left-[30%] max-sm:bottom-[72%]   max-md:before:left-1/2  max-lg:before:bottom-[75%]  before:z-[6] before:rounded-[50%]    max-md:p-6     lg:before:-translate-y-1/2  max-lg:before:-translate-x-1/2  before:bg-backgroundColor before:transition-all before:duration-[2s] lg:before:duration-[1.8s]  ${
           isSignUpMode
@@ -23,14 +26,14 @@ const SlidingLoginSignup = () => {
       >
         <div className="absolute w-full h-full top-0 left-0">
           <div
-            className={` absolute top-[95%] lg:top-1/2 left-1/2 grid grid-cols-[1fr] z-[5] -translate-x-1/2  -translate-y-full lg:-translate-y-1/2 lg:w-1/2 w-full  transition-[1s]  duration-[0.8s] lg:duration-[0.7s] ease-[ease-in-out] "  ${
+            className={` absolute top-[95%] lg:top-1/2 left-1/2 grid grid-cols-1 z-[5] -translate-x-1/2  -translate-y-full lg:-translate-y-1/2 lg:w-1/2 w-full  transition-[1s]  duration-[0.8s] lg:duration-[0.7s] ease-[ease-in-out] "  ${
               isSignUpMode
                 ? "lg:left-1/4   max-lg:top-[-10%]   max-lg:-translate-x-2/4   max-lg:translate-y-0"
                 : "lg:left-3/4 "
             } `}
           >
             <div
-              className={` flex items-center justify-center flex-col   transition-all duration-[0.2s] delay-[0.7s] overflow-hidden col-[1_/_2] row-[1_/_2] px-20 max-lg:mt-60  z-20 max-md:px-6 max-md:py-0 ${
+              className={` flex items-center justify-center flex-col   transition-all duration-[0.2s] delay-[0.7s] overflow-hidden col-start-1 col-end-2 row-start-1 row-end-2 px-20 max-lg:mt-60  z-20 max-md:px-6 max-md:py-0 ${
                 isSignUpMode ? " opacity-0 z-10 " : " "
               }`}
             >
@@ -102,7 +105,7 @@ const SlidingLoginSignup = () => {
             
             <button
               type="submit"
-              className="w-full text-white bg-backgroundColor hover:bg-brightColor focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-[1.02] hover:shadow-md"
+              className={buttonClasses}
             >
               Sign in
             </button>
@@ -119,21 +122,21 @@ const SlidingLoginSignup = () => {
           
           <div className="grid grid-cols-3 gap-3">
             {/* Google */}
-            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white py-2.5 px-4 text-sm font-medium text-gray-500 hover:bg-gray-50 shadow-sm transition-all duration-200 hover:shadow hover:border-gray-400">
+            <button type="button" className={buttonForGFT}>
               <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
               </svg>
             </button>
             
             {/* Facebook */}
-            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white py-2.5 px-4 text-sm font-medium text-gray-500 hover:bg-gray-50 shadow-sm transition-all duration-200 hover:shadow hover:border-gray-400">
+            <button type="button" className={buttonForGFT}>
               <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
               </svg>
             </button>
             
             {/* Twitter/X */}
-            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white py-2.5 px-4 text-sm font-medium text-gray-500 hover:bg-gray-50 shadow-sm transition-all duration-200 hover:shadow hover:border-gray-400">
+            <button type="button" className={buttonForGFT}>
               <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"/>
               </svg>
@@ -149,7 +152,7 @@ const SlidingLoginSignup = () => {
             </div>
 
             <div
-              className={` flex items-center justify-center flex-col px-20 transition-all  ease-in-out duration-[0.2s] delay-[0.7s] overflow-hidden col-[1_/_2] row-[1_/_2] py-0 z-10 max-md:px-6 max-md:py-0 opacity-0 ${
+              className={` flex items-center justify-center flex-col px-20 transition-all  ease-in-out duration-[0.2s] delay-[0.7s] overflow-hidden col-start-1 col-end-2 row-start-1 row-end-2 py-0 z-10 max-md:px-6 max-md:py-0 opacity-0 ${
                 isSignUpMode ? "opacity-100 z-20 " : "  "
               }`}
             >
@@ -248,7 +251,7 @@ const SlidingLoginSignup = () => {
             
             <button
               type="submit"
-              className="w-full text-white bg-backgroundColor hover:bg-brightColor focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all duration-200 transform hover:scale-[1.02] hover:shadow-md"
+              className={buttonClasses}
             >
               Create Account
             </button>
@@ -265,21 +268,21 @@ const SlidingLoginSignup = () => {
           
           <div className="grid grid-cols-3 gap-3">
             {/* Google */}
-            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white py-2.5 px-4 text-sm font-medium text-gray-500 hover:bg-gray-50 shadow-sm transition-all duration-200 hover:shadow hover:border-gray-400">
+            <button type="button" className={buttonForGFT}>
               <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
               </svg>
             </button>
             
             {/* Facebook */}
-            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white py-2.5 px-4 text-sm font-medium text-gray-500 hover:bg-gray-50 shadow-sm transition-all duration-200 hover:shadow hover:border-gray-400">
+            <button type="button" className={buttonForGFT}>
               <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
               </svg>
             </button>
             
             {/* Twitter/X */}
-            <button type="button" className="inline-flex w-full justify-center items-center rounded-lg border border-gray-300 bg-white py-2.5 px-4 text-sm font-medium text-gray-500 hover:bg-gray-50 shadow-sm transition-all duration-200 hover:shadow hover:border-gray-400">
+            <button type="button" className={buttonForGFT}>
               <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"/>
               </svg>
@@ -295,9 +298,9 @@ const SlidingLoginSignup = () => {
           </div>
         </div>
 
-        <div className="absolute h-full w-full top-0 left-0 grid grid-cols-[1fr]   max-lg:grid-rows-[1fr_2fr_1fr]  lg:grid-cols-[repeat(2,1fr)]">
+        <div className="absolute h-full w-full top-0 left-0 grid grid-cols-1   max-lg:grid-rows-[1fr_2fr_1fr]  lg:grid-cols-2">
           <div
-            className={`flex flex-row justify-around lg:flex-col items-center  max-lg:col-[1_/_2]  max-lg:px-[8%]   max-lg:py-10 lg:items-end  text-center z-[6]   max-lg:row-[1_/_2]      pl-[12%] pr-[17%] pt-12 pb-8 ${
+            className={`flex flex-row justify-around lg:flex-col items-center  max-lg:col-start-1 max-lg:col-end-2  max-lg:px-[8%]   max-lg:py-10 lg:items-end  text-center z-[6]   max-lg:row-start-1 max-lg:row-end-2     pl-[12%] pr-[17%] pt-12 pb-8 ${
               isSignUpMode ? "pointer-events-none" : " pointer-events-auto"
             }`}
           >
@@ -335,7 +338,7 @@ const SlidingLoginSignup = () => {
             />
           </div>
           <div
-            className={`flex flex-row   max-lg:row-[3_/_4] lg:flex-col items-center lg:items-end justify-around text-center z-[6]   max-lg:col-[1_/_2]   max-lg:px-[8%]   max-lg:py-10  pl-[17%] pr-[12%] pt-12 pb-8 ${
+            className={`flex flex-row   max-lg:row-start-3 max-lg:row-end-4 lg:flex-col items-center lg:items-end justify-around text-center z-[6]   max-lg:col-start-1 max-lg:col-end-2  max-lg:px-[8%]   max-lg:py-10  pl-[17%] pr-[12%] pt-12 pb-8 ${
               isSignUpMode ? " pointer-events-auto" : "pointer-events-none"
             }`}
           >
@@ -349,7 +352,7 @@ const SlidingLoginSignup = () => {
               <h3 className="font-semibold leading-none text-[1.2rem] lg:text-[1.5rem] text-gray-700">
                 One of us ?
               </h3>
-              <p class=" py-2 text-[0.7rem] lg:text-[0.95rem] px-0  lg:py-[0.7rem]">
+              <p className=" py-2 text-[0.7rem] lg:text-[0.95rem] px-0  lg:py-[0.7rem]">
                 Sign in to your account to have hastle free experience
               </p>
               <button
@@ -373,7 +376,7 @@ const SlidingLoginSignup = () => {
           </div>
         </div>
       </div>
-    </div>
+   
   );
 };
 export default SlidingLoginSignup;
