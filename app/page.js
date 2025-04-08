@@ -25,7 +25,7 @@ const SlidingLoginSignup = () => {
 
   return (
     <div
-      className={`relative w-full bg-white min-h-[100vh] lg:min-h-screen overflow-hidden
+      className={`relative w-full bg-white min-h-screen overflow-hidden
            before:content-[''] before:absolute before:w-[1500px] before:h-[1500px] lg:before:h-[2000px] 
            lg:before:w-[2000px] lg:before:top-[-10%]  before:top-[initial] lg:before:right-[48%] 
            before:right-[initial]  max-lg:before:left-[30%] max-sm:bottom-[72%]   max-md:before:left-1/2 
