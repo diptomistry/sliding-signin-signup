@@ -33,7 +33,7 @@ const SlidingLoginSignup = () => {
             lg:before:-translate-y-1/2  max-lg:before:-translate-x-1/2  before:bg-backgroundColor 
             before:transition-all before:duration-[2s] lg:before:duration-[1.8s]  ${
         isSignUpMode
-          ? `lg:before:translate-x-full lg:before:-translate-y-1/2 before:-translate-x-1/2 
+          ? `lg:before:translate-x-full before:-translate-x-1/2 
           before:translate-y-full lg:before:right-[52%] before:right-[initial]  sm:max-lg:before:bottom-[22%]
            max-sm:before:bottom-[20%]  max-md:before:left-1/2`
           : ""
